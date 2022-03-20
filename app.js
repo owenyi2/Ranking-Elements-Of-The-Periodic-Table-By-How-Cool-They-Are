@@ -22,8 +22,8 @@ function resetComparison(){
 
     var img1 = document.createElement("img");
     var img2 = document.createElement("img");
-    img1.src = "images/" + elements[0] + ".png";
-    img2.src = "images/" + elements[1] + ".png";
+    img1.src = "Ranking-Elements-Of-The-Periodic-Table-By-How-Cool-They-Are/images/" + elements[0] + ".png";
+    img2.src = "Ranking-Elements-Of-The-Periodic-Table-By-How-Cool-They-Are/images/" + elements[1] + ".png";
 
     document.getElementById("element-1-icon").replaceChild(img1, document.getElementById("element-1-icon").childNodes[0]);
     document.getElementById("element-2-icon").replaceChild(img2, document.getElementById("element-2-icon").childNodes[0]);
