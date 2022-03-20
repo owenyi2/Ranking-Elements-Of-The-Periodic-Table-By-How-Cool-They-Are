@@ -2,8 +2,13 @@ div {
     text-align: justify;
     text-justify: inter-word;
 }
-
-.btn {
-    position: relative;
-    left: 250px;
+.comparison-container {
+    display: flex;
+    width: 50%;
 }
+.flex-child {
+    flex: 1;
+}  
+.flex-child:first-child {
+    margin-right: 20px;
+} 
