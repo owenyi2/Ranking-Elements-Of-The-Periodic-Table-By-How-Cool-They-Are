@@ -23,6 +23,7 @@ function resetComparison(){
     var img1 = document.createElement("img");
     var img2 = document.createElement("img");
     img1.src = "/images/" + elements[0] + ".png";
+    alert(img1.src)
     img2.src = "/images/" + elements[1] + ".png";
 
     document.getElementById("element-1-icon").replaceChild(img1, document.getElementById("element-1-icon").childNodes[0]);
