@@ -7,15 +7,22 @@ const clickOption1 = document.getElementById("btn-option-1");
 const clickOption2 = document.getElementById("btn-option-2");
 const clickBoth = document.getElementById("btn-both")
 
-function generateTwoRandomElements(){
-    var elementNum1 = Math.floor(Math.random() * 118);
-    var elementNum2 = Math.floor(Math.random() * 118);
+function GenerateTwoRandomElements(){
+    var elementNum1 = RandomNumber(118);
+    var elementNum2 = RandomNumber(118);
+    while (elementNum1 == elementNum2){
+        elementNum2 = RandomNumber(118);
+    }
 
     return [elementList[elementNum1], elementList[elementNum2]];
 };
 
-function resetComparison(){
-    var elements = generateTwoRandomElements();
+function RandomNumber(val){
+    return Math.floor(Math.random() * val);
+};
+
+function ResetComparison(){
+    var elements = GenerateTwoRandomElements();
 
     document.getElementById("element-name-1").innerHTML = elements[0];
     document.getElementById("element-name-2").innerHTML = elements[1];
@@ -36,17 +43,17 @@ window.addEventListener('load', (event) => {
     document.getElementById("element-1-icon").appendChild(document.createElement("img"));
     document.getElementById("element-2-icon").appendChild(document.createElement("img"));
 
-   resetComparison(); 
+   ResetComparison(); 
 });
 
 clickOption1.addEventListener("click", function() {
     //elo and database and stuff goes here
-    resetComparison(); 
+    ResetComparison(); 
 });
 
 clickOption2.addEventListener("click", function() {
     //elo and database and stuff goes here
-    resetComparison(); 
+    ResetComparison(); 
 });
 
 clickBoth.addEventListener("click", function() {
